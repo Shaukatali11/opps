@@ -1,0 +1,48 @@
+Access specifier/modefier:
+
+As we know by defaul class data member and member function are private mean we can not access the data member and member function of the class, so the concept comes access specifier 
+
+Three is 3 types:
+1.Private :- No one can access
+2.Protected : Ony child or derived class access
+3.Public : Any one can access 
+
+//basic example of class creation and how can access the class member and member function:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class employee{
+  public:
+  int id;
+  string name;
+  int age;
+  int sallary;
+    
+  employee(int x, string y, int z, int a){
+
+    id=x;
+    name=y;
+    age=z;
+    sallary=a;
+  }
+    
+  void display(){
+    cout<<"id of employee: "<<id<<endl;
+    cout<<"name of employee: "<<name<<endl;
+    cout<<"age of employee: "<<age<<endl;
+    cout<<"sallary of employee: "<<sallary<<endl;
+
+  }
+    
+};
+
+int main(){
+    
+    employee emp1(1,"Shaukatt",22,50000);
+    employee emp2(2,"Moqaddas",24,50000);
+    emp1.display();
+    return 0;
+}
+
+
