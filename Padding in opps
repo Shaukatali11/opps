@@ -1,0 +1,24 @@
+Padding/packing in opps:-
+
+Adding extra bytes to a structure or class to align its data members to specific boundaries.
+
+class Animal{
+  int age;  
+  int weight;
+  char ch;
+};
+The output will be Size of struct PackedExample: 12
+
+
+1. Structure padding is the process of adding extra bytes between the members of a structure to ensure that each member is properly aligned according to the processor's requirements.
+
+struct PackedExample {
+    char a;    // 1 byte
+    int b;     // 4 bytes
+    short c;   // 2 bytes
+};
+The output will be Size of struct PackedExample: 7
+
+2. Structure packing disables the default padding added by the compiler, which can reduce the memory footprint of structures but may lead to misaligned accesses, potentially reducing performance and causing hardware exceptions on some architectures.
+
+
