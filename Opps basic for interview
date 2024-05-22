@@ -1,0 +1,65 @@
+Basic of opps in c++:
+
+=> Opps stand for object programing language, in which everything arround class and object.
+2. It's a modular way to design and deployement of a program.
+3. Four piller of opps is:
+    1. Encapsulation
+    2. Abstraction
+    3. Inheritance
+    4. Polymorphism
+
+=> c++ is extention of c: There is some improvement over c in c++ :
+1. stream io
+2. Inlining
+3. Default argument value
+4. Parameter passing by refrence
+5. opps advantage
+
+==> Some Common terminology:
+      => A data memeber or variable inside is called attribute.
+      => A function inside class is called method.
+
+==> There is some Defination of opps terminology:
+CLASS:- Class is blueprint of object, It's a user defind data type which contain the property and behaviour of object, property refer to data member and behaviour refer to member function.
+OBJECT:- Object is instance of class, It's an entity which is exist in the real world
+
+==> FOUR PILLER OF OPPS:
+Encapsulation:- The process of binding data member(variable) and member function (function) into a single unit.
+Abstraction:- This is process to hide irrelevent information from users they only know about essential information.
+Inheritance:- This is the process to deriving class from base class(parent class) so child class inherit all the property of parent class.
+Polymorphism:- Polymorphism means there is many form of a single function and operator according to parameter.
+
+
+
+=> Perfect Encapsulation:- When we marked all the data member to private 
+
+==> CREATING CLASS:
+
+class Animal{         // class name Animal
+  public:             // access modifier
+  int data;          // data member
+  string name;
+  void func(){      // member function or method
+      cout<<"shaukat bahar aoo";   //output
+  }
+};
+
+int main(){   // main function 
+  Animal A:   // object created for Animal class.
+  A.func();   // they return --- shaukat bahar aoo.
+}
+
+
+
+==> Scope Resolution:- 
+1. represented by ::
+2. used to define function outside of class
+3. access global variable by using local variable of same name 
+
+void Animal :: func() {
+  
+}
+
+
+
+
