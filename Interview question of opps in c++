@@ -1,0 +1,48 @@
+==> FOUR PILLER OF OPPS:
+Encapsulation:- The process of binding data member(variable) and member function (function) into a single unit.
+Abstraction:- This is process to hide irrelevent information from users they only know about essential information.
+Inheritance:- This is the process to deriving class from base class(parent class) so child class inherit all the property of parent class.
+Polymorphism:- Polymorphism means there is many form of a single function and operator according to parameter.
+
+
+==> Inheritence types:
+1. single inheritence:- when there is one child class and one base class.
+2. Multiple inheritence:- when there is one chile class derive from multiple base class
+3. Multilevel Inheritence:- when a child-1 class derive from parent class and other child-2 class derive from child-1 class.
+4. Hierarical Inheritence:- when a child class derive from multiple base or parent class.
+
+==> Polymorphism types:
+
+                       polymorphism
+                      /             \
+                     /               \
+                    /                 \
+          compile time poly.          Run time poly.
+          /              \                      \
+        /                  \                      \
+      /                      \                      \
+function overloading      operator overloading     function overiding
+  
+1. Compile time polymorphism:- Compile-time polymorphism is illustrated by method overloading.
+2. Run time polymorphism :- Runtime polymorphism is illustrated by method overriding.
+
+3. function overloading:- function overloading is the concept of polymorphism in which there is diffrent different function of same name ans  as we pass the argumet 
+to the function they return diffrent diffrent result.
+
+4. operator overloading :- to assign diffrent different operation to the same operator.
+
+5. function overriding:- when there is derived class or child class and both parent and child have same function name this is function overriding.
+
+==> Now Some more important concept on opps:
+ abstract class: whene there is atleast one pure virtual function and atleast one regular function in side the class this is called abstract class. we can not create object of this class.
+ interface :- when there is only pure vitual function in side class this is called interface.
+
+==> virtual function:- it is same concept of function overriding(when there is derived class or child class and both parent and child have same function name this is function overriding.)
+ we ony use virtual keyword in the parent class before function name. 
+ 
+==> Pure virtual function:- There is no implementation of this function  ----> func()=0;
+
+
+
+
+        
