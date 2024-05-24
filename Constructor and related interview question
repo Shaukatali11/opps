@@ -1,0 +1,113 @@
+==> Constructor and destructor
+   Constructor is a special type of function which is same name as class name. It automatically called when object is created. Does not return any value.
+
+==> There is various type of constructor:-
+
+1. Default Constructor:- A constructor that does not take any parameters.
+
+class Box {
+    double length, breadth, height;
+    public:
+    Box() {
+        length = 0.0;
+        breadth = 0.0;
+        height = 0.0;
+        cout << "Default constructor called." << endl;
+    void display() {
+        cout << "Length: " << length << ", Breadth: " << breadth << ", Height: " << height << endl;
+    }
+  };
+int main() {
+    Box box1;
+    box1.display();
+    return 0;
+}
+
+
+2. Parameterized Constructor :- A constructor that takes one or more parameters.
+
+class Box {
+    double length, breadth, height;
+    public:  
+    Box(double l, double b, double h) {
+        length = l;
+        breadth = b;
+        height = h;
+        cout << "Parameterized constructor called." << endl;
+    void display() {
+        cout << "Length: " << length << ", Breadth: " << breadth << ", Height: " << height << endl;
+    }
+};
+int main() {
+    Box box2(3.3, 1.2, 1.5);
+    box2.display();
+    return 0;
+}
+
+
+3. Copy Constructor:- A constructor that initializes a new object as a copy of an existing object.
+
+class Box {
+    double length, breadth, height;
+    public:
+    Box(const Box &box) {
+        length = box.length;
+        breadth = box.breadth;
+        height = box.height;
+        cout << "Copy constructor called." << endl;
+    void display() {
+        cout << "Length: " << length << ", Breadth: " << breadth << ", Height: " << height << endl;
+    }
+};
+
+int main() {
+    Box box3 = box2;
+    box3.display();
+    return 0;
+}
+
+
+
+===>> Now we deiscuss some important interview question:-
+
+Q1. What is a constructor in C++?
+Answer: A constructor is a special member function of a class that is automatically called when an object of the class is instantiated. 
+It is used to initialize the object's attributes and perform any setup or configuration necessary for the object.
+
+Q2. What is a default constructor?
+Answer: A default constructor is a constructor that takes no parameters. It is used to initialize objects with default values. 
+If no constructors are defined in a class, the compiler provides a default constructor.
+
+Q3. What is a parameterized constructor?
+Answer: A parameterized constructor is a constructor that takes one or more parameters. It allows an object to be initialized with specific values provided during 
+instantiation.
+
+Q4. What is a copy constructor?
+Answer: A copy constructor is a constructor that initializes a new object as a copy of an existing object. It takes a reference to an object of the same class as a parameter. 
+The copy constructor is used to copy the values of an existing object's attributes to a new object.
+
+Q5.What is constructor overloading?
+Answer: Constructor overloading is the process of defining multiple constructors in a class with different parameter lists. It allows objects to be created in different 
+ways by providing different sets of initial values.
+
+Q6. Why do we need a copy constructor?
+Answer: A copy constructor is needed to create a new object as an exact copy of an existing object. This is useful when we want to duplicate an object with the 
+same state and behavior as the original object. The default copy constructor provided by the compiler performs a shallow copy, which might not be sufficient for 
+objects with dynamically allocated memory or complex structures.
+
+Q7. What is the difference between a constructor and a method?
+Answer: The main differences are:
+--> A constructor is a special member function that initializes an object, while a method (or member function) defines behavior for an object after it has been created.
+--> A constructor has the same name as the class, whereas methods can have any name.
+--> Constructors do not have a return type, not even void, while methods can have a return type.
+
+Q8. Can constructors be virtual in C++?
+Answer: No, constructors cannot be virtual in C++. Virtual functions rely on the virtual table (vtable) which is set up by the constructors. 
+Since constructors are responsible for setting up the vtable, allowing them to be virtual would create a circular dependency.
+
+Q9. What happens if you do not define a copy constructor in a class?
+Answer: If you do not define a copy constructor, the compiler provides a default copy constructor that performs a shallow copy of the object. 
+This means that each member of the new object is copied directly from the corresponding member of the existing object. 
+This can lead to problems if the class contains pointers to dynamically allocated memory, as both objects will point to the same memory location.
+
+
