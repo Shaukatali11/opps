@@ -1,0 +1,95 @@
+==> Inheritence:
+          when child class inherite the data member and member function of base class.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+  public:
+  void funct1(){
+    cout<<"print function one"<<endl;
+  }
+};
+
+class B: public A{
+  public:
+  void funct2(){
+    cout<<"print function two";
+  }
+};
+
+int main(){
+  B b;
+  b.funct1();
+  return 0;
+}
+
+Here class B derive from class A so they can inherit all the behaviour of class A.
+
+====> problem with Multiple inheritence (Diamond problem)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+  public:
+  void funct1(){
+    cout<<"print function one"<<endl;
+  }
+};
+
+class B: public A{
+  public:
+  void funct2(){
+    cout<<"print function two";
+  }
+};
+class C:public B,public A{
+  public:
+  void funct3(){
+    cout<<"print function 3";
+  }
+};
+int main(){
+  C c;
+  c.funct1();
+  return 0;
+}
+
+In the context of inheritance, ambiguity occurs when the compiler cannot decide which base class member to call because there are multiple candidates due to multiple
+inheritance.
+
+so we use virtual inheritence :
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+  public:
+  void funct1(){
+    cout<<"print function one"<<endl;
+  }
+};
+
+class B: virtual public A{
+  public:
+  void funct2(){
+    cout<<"print function two";
+  }
+};
+class C:public B,virtual public A{
+  public:
+  void funct3(){
+    cout<<"print function 3";
+  }
+};
+int main(){
+  C c;
+  c.funct2();
+  B b;
+  b.funct1();
+  return 0;
+}
+
+When a class is virtually inherited, it is referred to as a virtual base class. This ensures that only one instance of the virtual base class is shared among all derived classes.
+
+
